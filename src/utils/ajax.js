@@ -34,7 +34,6 @@ axiosConfig.interceptors.response.use(
   }
 );
 let ajax = function(config) {
-  console.log(config.loading)
   let loading = config.loading !== undefined ? config.loading : true; //loading监听
   config.method = config.type;
 
@@ -57,7 +56,7 @@ let ajax = function(config) {
   delete config.loading;
   let ajax = axiosConfig(config);
   if (loading) {
-    store.state.loading = true;
+    store.commit('updateLoading', true);
     store.dispatch("globalLoading", ajax);
   }
   return ajax;
