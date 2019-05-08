@@ -3,8 +3,8 @@ import router from "@/router";
 import store from "@/store";
 import { ajax, regex } from "@/utils";
 import App from "@/App.vue";
-import "@/element-ui";
 import 'reset-css';
+import "@/element-ui";
 import "@/App.styl";
 
 Vue.config.productionTip = false;
