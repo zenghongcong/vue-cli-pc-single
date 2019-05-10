@@ -1,7 +1,7 @@
 import Vue from "vue";
 import router from "@/router";
 import store from "@/store";
-import { ajax, regex } from "@/utils";
+import { ajax } from "@/utils";
 import App from "@/App.vue";
 import 'reset-css';
 import "@/element-ui";
@@ -14,7 +14,6 @@ if (process.globalConfig.uweb) {
 }
 
 Vue.mixin(ajax);
-Vue.mixin(regex);
 
 new Vue({
   router,
